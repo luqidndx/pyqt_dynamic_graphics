@@ -47,7 +47,7 @@ class QtDraw(QMainWindow):
             ax = self.fig.add_subplot(111)
             x = np.linspace(0, 100, 100)
             y = np.random.random(100)
-            ax.cla()  # TODO:删除原图，让画布上只有新的一次的图
+            ax.cla()  # TODO:删除原图，让画布上只有新的一次的图，注意是先删再画，而不是先画再删，不然就啥也看不到了啥也没画
             ax.plot(x, y)
             self.canvas.draw()  # TODO:这里开始绘制
         except Exception as e:
